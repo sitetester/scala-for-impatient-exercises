@@ -16,4 +16,7 @@ object Ch4 {
 
     table
   }
+
+  def exercise8_minMax(xs: Seq[Int]): (Int, Int) = (xs.min, xs.max)
+
 }
