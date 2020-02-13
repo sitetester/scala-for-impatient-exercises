@@ -19,4 +19,7 @@ object Ch4 {
 
   def exercise8_minMax(xs: Seq[Int]): (Int, Int) = (xs.min, xs.max)
 
+  def exercise9_lteqgt(xs: Array[Int], v: Int): (Int, Int, Int) = {
+    (xs.count(_ < v), xs.count(_ == v), xs.count(_ > v))
+  }
 }
