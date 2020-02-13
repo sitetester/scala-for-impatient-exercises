@@ -15,4 +15,10 @@ class Ch4 extends AnyFlatSpec {
   it should "exercise9" in {
     assert(Ch4.exercise9_lteqgt(Array(4, 1, 2, 3, 4, 5), 4) == (3, 2, 1))
   }
+
+  it should "exercise10" in {
+    val zipped = Ch4.exercise10_zip("Hello", "World")
+    assert(zipped.head == ('H', 'W'))
+    assert(zipped.last == ('o', 'd'))
+  }
 }
