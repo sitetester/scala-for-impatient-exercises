@@ -10,4 +10,8 @@ class Ch9 extends AnyFlatSpec {
     Ch9.exercise3("txt/dummy.txt")
   }
 
+  it should "exercise4" in {
+    Ch9.exercise4("txt/only_floating_point_numbers.txt")
+  }
+
 }

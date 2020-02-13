@@ -26,7 +26,23 @@ object Ch9 {
         l.split("\\s").filter(_.length > 12)
       })
       .foreach(println(_))
+  }
 
+  def exercise4(path: String): Unit = {
+    val contents = Source
+      .fromResource(path)
+      .getLines()
+      .toList
+      .head
+      .toString
+      .split(" ")
+      .toList
+      .map(_.toFloat)
+
+    val (sum, avg, max, min) =
+      (contents.sum, contents.sum / contents.size, contents.max, contents.min)
+
+    println(sum, avg, max, min)
   }
 
 }
