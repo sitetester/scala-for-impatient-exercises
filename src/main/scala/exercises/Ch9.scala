@@ -17,4 +17,16 @@ object Ch9 {
     bw.close()
   }
 
+  def exercise3(path: String): Unit = {
+    Source
+      .fromResource(path)
+      .getLines()
+      .toList
+      .flatMap(l => {
+        l.split("\\s").filter(_.length > 12)
+      })
+      .foreach(println(_))
+
+  }
+
 }
