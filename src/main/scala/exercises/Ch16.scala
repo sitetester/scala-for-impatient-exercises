@@ -16,4 +16,15 @@ object Ch16 {
       println(s"href=${m.group(1)}, text=${m.group(2)}")
     }
   }
+
+  def exercise7(map: Map[String, String]): String = {
+
+    map match {
+      case m: Map[String, String] =>
+        val h = m.head
+        val l = m.last
+
+        s"<dl><dt>${h._1}</dt><dd>${h._2}</dd><dt>${l._1}</dt><dd>${l._2}</dd></dl>"
+    }
+  }
 }
