@@ -10,4 +10,8 @@ class Ch13 extends AnyFlatSpec {
     assert(result.filter(_._1 == 'i').head.toString() == "(i,{1,4,7,10})")
     assert(result.last.toString() == "(p,{8,9})")
   }
+
+  it should "exercise10" in {
+    assert(Ch13.exercise10() == ("America", 166))
+  }
 }

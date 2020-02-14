@@ -28,4 +28,17 @@ object Ch13 {
     lb.toList
   }
 
+  def exercise10(): (String, Int) = {
+    val timezones =
+      java.util.TimeZone
+        .getAvailableIDs()
+        .toList
+        .filter(_.contains("/"))
+        .map(tz => tz.split("/").toList)
+        .groupBy(_.head)
+        .mapValues(_.size)
+
+    val max = timezones.values.max
+    timezones.find(_._2 == max).get
+  }
 }
