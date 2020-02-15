@@ -10,7 +10,7 @@ object Ch9 {
     val lines = Source.fromResource(path).getLines()
     val contents = lines.toList.reverse.mkString("\n")
 
-    val reversedPath = "src/test/resources/txt/reversed.txt"
+    val reversedPath = "src/test/resources/ch9/reversed.txt"
     val file = new File(reversedPath)
     val bw = new BufferedWriter(new FileWriter(file))
     bw.write(contents)
