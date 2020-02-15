@@ -24,4 +24,14 @@ object Ch19 {
       Left(-1)
     }
   }
+
+  def exercise8_printValues(obj: Multiplier,
+                            start: Int,
+                            end: Int): List[Int] = {
+    for (v <- (start to end).toList) yield obj(v)
+  }
+}
+
+class Multiplier() {
+  def apply(x: Int): Int = x * x
 }
