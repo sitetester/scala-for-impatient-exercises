@@ -43,4 +43,11 @@ object Ch2 {
     println(str.map(_.toLong).reduce((x, y) => x * y)) // my IDE warns `Replace reduce with product`
   }
 
+  def exercise9(str: String): Long = {
+    var product = str.head.toLong
+    if (str.tail.length > 0) {
+      product *= exercise9(str.tail)
+    }
+    product
+  }
 }

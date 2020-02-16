@@ -9,4 +9,8 @@ class Ch2 extends AnyFlatSpec {
   it should "exercise6" in {
     exercises.Ch2.exercise6("Hello")
   }
+
+  it should "exercise9" in {
+    assert(exercises.Ch2.exercise9("Hello") == 9415087488L)
+  }
 }
