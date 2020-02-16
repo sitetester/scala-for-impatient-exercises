@@ -27,6 +27,16 @@ object Ch5 {
         .balance
     )
   }
+
+  def exercise3(): Unit = {
+    val time1 = new Time(19, 30)
+    val b1 = time1.before(new Time(15, 30))
+    println(b1)
+
+    val time2 = new Time(15, 30)
+    val b2 = time2.before(new Time(19, 30))
+    println(b2)
+  }
 }
 
 class Counter {
@@ -63,4 +73,20 @@ class BankAccount {
   }
 
   def balance: Long = _balance
+}
+
+class Time(hrs: Int, min: Int) {
+
+  val time: Int = (hrs.toString + min.toString).toInt
+
+  def before(other: Time): Boolean = {
+    val otherTime = (other.hours.toString + other.minutes.toString).toInt
+
+    time < otherTime
+  }
+
+  def hours: Int = hrs
+
+  def minutes: Int = min
+
 }
