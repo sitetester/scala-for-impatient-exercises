@@ -8,6 +8,25 @@ object Ch5 {
       .increment()
       .show()
   }
+
+  def exercise2(): Unit = {
+    // using object
+    val ba = new BankAccount
+    val balance = ba
+      .deposit(1000)
+      .withdraw(500)
+      .balance
+
+    println(balance)
+
+    // without object
+    println(
+      (new BankAccount)
+        .deposit(100)
+        .withdraw(10)
+        .balance
+    )
+  }
 }
 
 class Counter {
@@ -27,4 +46,21 @@ class Counter {
     println(value)
     this
   }
+}
+
+class BankAccount {
+
+  private var _balance = 0L
+
+  def deposit(amount: Long): this.type = {
+    _balance += amount
+    this
+  }
+
+  def withdraw(amount: Long): this.type = {
+    _balance -= amount
+    this
+  }
+
+  def balance: Long = _balance
 }
