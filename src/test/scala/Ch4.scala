@@ -11,6 +11,10 @@ class Ch4 extends AnyFlatSpec {
     Ch4.exercise3("ch4/word_count.txt")
   }
 
+  it should "exercise6" in {
+    Ch4.exercise6()
+  }
+
   it should "exercise7" in {
     assert(Ch4.exercise7().nonEmpty)
   }

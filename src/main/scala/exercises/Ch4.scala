@@ -1,4 +1,5 @@
 package exercises
+import java.util.Calendar
 
 import scala.collection.immutable.SortedMap
 import scala.collection.mutable
@@ -41,6 +42,20 @@ object Ch4 {
     }
 
     println(wordCount)
+  }
+
+  def exercise6(): Unit = {
+    val m = mutable.LinkedHashMap[String, Int]()
+
+    m("Monday") = Calendar.MONDAY
+    m("Tuesday") = Calendar.TUESDAY
+    m("Wednesday") = Calendar.WEDNESDAY
+    m("Thursday") = Calendar.THURSDAY
+    m("Friday") = Calendar.FRIDAY
+    m("Saturday") = Calendar.SATURDAY
+    m("Sunday") = Calendar.SUNDAY
+
+    println(m)
   }
 
   def exercise7(): String = {
