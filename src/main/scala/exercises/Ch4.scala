@@ -1,5 +1,6 @@
 package exercises
 
+import scala.collection.immutable.SortedMap
 import scala.collection.mutable
 
 object Ch4 {
@@ -16,6 +17,25 @@ object Ch4 {
             wordCount(w) += 1
           } else {
             wordCount(w) = 1
+          }
+        })
+    }
+
+    println(wordCount)
+  }
+
+  def exercise3(path: String): Unit = {
+    val source = io.Source.fromResource(path)
+
+    var wordCount = SortedMap[String, Int]()
+
+    for (l <- source.getLines()) {
+      l.split("\\s+")
+        .foreach(w => {
+          if (wordCount.contains(w)) {
+            wordCount = wordCount.updated(w, wordCount(w) + 1)
+          } else {
+            wordCount = wordCount + (w -> 1)
           }
         })
     }
