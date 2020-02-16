@@ -2,6 +2,11 @@ package exercises
 
 object Ch19 {
 
+  def exercise1(): Unit = {
+    val bugsy = new Bug()
+    bugsy.move(4).show().move(6).show().turn().move(5).show()
+  }
+
   // TODO: Use an infix type as the return type ?
   def exercise6(a: Array[Int], v: Int): Either[Int, Int] = {
     if (a.contains(v)) {
@@ -29,6 +34,25 @@ object Ch19 {
                             start: Int,
                             end: Int): List[Int] = {
     for (v <- (start to end).toList) yield obj(v)
+  }
+}
+
+class Bug {
+  var x: Int = 0
+
+  def move(v: Int): this.type = {
+    x += v
+    this
+  }
+
+  def turn(): this.type = {
+    x = 0
+    this
+  }
+
+  def show(): this.type = {
+    println(x)
+    this
   }
 }
 
