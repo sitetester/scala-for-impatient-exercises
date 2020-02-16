@@ -62,12 +62,16 @@ object Ch4 {
     var table = ""
     val props = java.lang.System.getProperties
 
+    var keys = Map[String, Int]()
     props.forEach((k, v) => {
+      keys = keys + (k.toString -> k.toString.length)
+
       val spacing = 30
       val diffSpacing = spacing - k.toString.length
       table += s"$k ${" " * diffSpacing} | $v\n"
     })
 
+    println("Longest key: " + keys.maxBy(_._2) + "\n")
     println(table)
 
     table
