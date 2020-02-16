@@ -54,6 +54,20 @@ object Ch3 {
     a.distinct
   }
 
+  def exercise8(a: ListBuffer[Int]): Seq[Int] = {
+
+    // one way
+    val negatives = a.filter(_ < 0)
+    for (n <- negatives.tail.reverse) {
+      a.remove(a.indexOf(n))
+    }
+
+    // 2nd way
+    // val negatives = a.filter(_ < 0).tail
+    // a.filter(!negatives.contains(_))
+    a
+  }
+
   def exercise10(): Array[String] = {
     val timezones = java.util.TimeZone.getAvailableIDs
 

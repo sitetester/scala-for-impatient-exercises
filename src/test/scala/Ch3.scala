@@ -1,6 +1,8 @@
 import exercises.Ch3
 import org.scalatest.flatspec.AnyFlatSpec
 
+import scala.collection.mutable.ListBuffer
+
 class Ch3 extends AnyFlatSpec {
 
   it should "exercise1" in {
@@ -31,6 +33,11 @@ class Ch3 extends AnyFlatSpec {
     val a = Ch3.exercise7(List(1, 1, 2, 2, 3))
     assert(a.count(_ == 1) == 1)
     assert(a.count(_ == 2) == 1)
+  }
+
+  it should "exercise8" in {
+    val a = Ch3.exercise8(ListBuffer(51, -42, 30, -4, 25, -51, 8, 42))
+    assert(a == List(51, -42, 30, 25, 8, 42))
   }
 
   it should "exercise10" in {
