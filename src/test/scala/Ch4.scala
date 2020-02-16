@@ -3,6 +3,10 @@ import org.scalatest.flatspec.AnyFlatSpec
 
 class Ch4 extends AnyFlatSpec {
 
+  it should "exercise2" in {
+    Ch4.exercise2("ch4/word_count.txt")
+  }
+
   it should "exercise7" in {
     assert(Ch4.exercise7().nonEmpty)
   }

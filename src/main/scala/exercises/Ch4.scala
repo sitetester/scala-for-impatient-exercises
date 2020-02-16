@@ -1,6 +1,27 @@
 package exercises
 
+import scala.collection.mutable
+
 object Ch4 {
+
+  def exercise2(path: String): Unit = {
+    val source = io.Source.fromResource(path)
+
+    val wordCount = mutable.LinkedHashMap[String, Int]()
+
+    for (l <- source.getLines()) {
+      l.split("\\s+")
+        .foreach(w => {
+          if (wordCount.contains(w)) {
+            wordCount(w) += 1
+          } else {
+            wordCount(w) = 1
+          }
+        })
+    }
+
+    println(wordCount)
+  }
 
   def exercise7(): String = {
     var table = ""
