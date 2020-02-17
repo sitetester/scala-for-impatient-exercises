@@ -25,6 +25,10 @@ object Ch6 {
   def exercise2_milesToKilometers(inches: Double): Double = {
     (new MilesToKilometers).convert(inches)
   }
+
+  def exercise4(): Point = {
+    Point(3, 4)
+  }
 }
 
 object Conversions {
@@ -53,4 +57,18 @@ class MilesToKilometers extends UnitConversion {
 
 object Exercise5 extends App {
   args.reverse.foreach(println(_))
+}
+
+class Point {
+  var x = 0
+  var y = 0
+}
+
+object Point {
+  def apply(x: Int, y: Int): Point = {
+    val p = new Point
+    p.x = x
+    p.y = y
+    p
+  }
 }
