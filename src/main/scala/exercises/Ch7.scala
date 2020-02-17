@@ -1,9 +1,9 @@
 package exercises
 
-import exercises.com.ComExample
-import exercises.com.horstmann.impatient.ImpatientExample
-import exercises.horstmann.HorstmannExample
-import exercises.impatient.ImpatientExample2
+import exercises.ch7.com.ComExample
+import exercises.ch7.com.horstmann.impatient.ImpatientExample
+import exercises.ch7.horstmann.HorstmannExample
+import exercises.ch7.impatient.ImpatientExample2
 
 object Ch7 {
 
