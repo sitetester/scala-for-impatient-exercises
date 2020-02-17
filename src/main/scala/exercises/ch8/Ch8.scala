@@ -1,4 +1,4 @@
-package exercises
+package exercises.ch8
 
 object Ch8 {
 
@@ -12,6 +12,14 @@ object Ch8 {
     ca.deposit(50)
     ca.withdraw(10)
     println(ca.currentBalance)
+  }
+
+  def exercise5(): Unit = {
+    val point = new Point(3, 4)
+    println(point)
+
+    val labeledPoint = new LabeledPoint("some label", 3, 4)
+    println(labeledPoint)
   }
 }
 
@@ -45,3 +53,7 @@ class CheckingAccount(initialBalance: Double)
     balance
   }
 }
+
+class Point(x: Int, y: Int)
+
+class LabeledPoint(label: String, x: Int, y: Int) extends Point(x, y)
