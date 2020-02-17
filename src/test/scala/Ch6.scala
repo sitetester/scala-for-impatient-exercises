@@ -1,9 +1,9 @@
-import exercises.{Ch6, PlayingCard}
+import exercises.{Ch6, PlayingCard, Point}
 import org.scalatest.flatspec.AnyFlatSpec
 
 class Ch6 extends AnyFlatSpec {
 
-  /*it should "exercise1" in {
+  it should "exercise1" in {
     assert(Ch6.exercise1_inchesToCentimeters(1) == 2.54)
     assert(Ch6.exercise1_gallonsToLiters(1) == 3.7854)
     assert(Ch6.exercise1_milesToKilometers(1) == 1.60934)
@@ -17,7 +17,7 @@ class Ch6 extends AnyFlatSpec {
 
   it should "exercise4" in {
     assert(Ch6.exercise4().isInstanceOf[Point])
-  }*/
+  }
 
   it should "exercise6" in {
     Ch6.exercise6()
