@@ -1,4 +1,4 @@
-package exercises
+package exercises.ch7
 
 import java.util.{HashMap => JavaHashMap}
 
