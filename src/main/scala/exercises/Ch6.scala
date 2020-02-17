@@ -50,3 +50,7 @@ class GallonsToLiters extends UnitConversion {
 class MilesToKilometers extends UnitConversion {
   override def convert(unit: Double): Double = unit * 1.60934
 }
+
+object Exercise5 extends App {
+  args.reverse.foreach(println(_))
+}
