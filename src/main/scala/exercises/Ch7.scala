@@ -39,4 +39,17 @@ object Ch7 {
 
     println(scalaMap)
   }
+
+  def exercise9(): Unit = {
+    val name = System.getProperty("user.name")
+    println("Name: " + name)
+
+    println("Enter password:")
+    val password = scala.io.StdIn.readLine()
+    if (password != "secret") {
+      Console.err.println("Password is not `secret`")
+    } else {
+      println("Congrats! Valid password.")
+    }
+  }
 }

@@ -10,4 +10,8 @@ class Ch7 extends AnyFlatSpec {
   it should "exercise6" in {
     Ch7.exercise6()
   }
+
+  it should "exercise9" in {
+    Ch7.exercise9()
+  }
 }
