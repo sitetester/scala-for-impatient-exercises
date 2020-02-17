@@ -1,5 +1,7 @@
 package exercises
 
+import exercises.PlayingCard.PlayingCard
+
 object Ch6 {
 
   def exercise1_inchesToCentimeters(inches: Double): Double = {
@@ -28,6 +30,14 @@ object Ch6 {
 
   def exercise4(): Point = {
     Point(3, 4)
+  }
+
+  def exercise6(): String = {
+    PlayingCard.values.toString()
+  }
+
+  def exercise7(card: PlayingCard): Boolean = {
+    PlayingCard.isRed(card)
   }
 }
 
@@ -70,5 +80,18 @@ object Point {
     p.x = x
     p.y = y
     p
+  }
+}
+
+object PlayingCard extends Enumeration {
+  type PlayingCard = Value
+
+  val Hearts: PlayingCard.Value = Value("♥")
+  val Diamonds: PlayingCard.Value = Value("♦")
+  val Clubs: PlayingCard.Value = Value("♣")
+  val Spades: PlayingCard.Value = Value("♠")
+
+  def isRed(card: PlayingCard): Boolean = {
+    card == Hearts || card == Diamonds
   }
 }
