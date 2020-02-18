@@ -21,6 +21,11 @@ object Ch8 {
     val labeledPoint = new LabeledPoint("some label", 3, 4)
     println(labeledPoint)
   }
+
+  def exercise11(): Unit = {
+    case class Point(x: Int, y: Int)
+    println(Point(2, 3))
+  }
 }
 
 class BankAccount(initialBalance: Double) {
