@@ -46,6 +46,10 @@ object Ch3 {
     xs._1 ++ xs._2
   }
 
+  def exercise5(a: Array[Double]): Double = {
+    a.sum / a.length
+  }
+
   def exercise6(a: Seq[Int]): Seq[Int] = {
     a.reverse
   }

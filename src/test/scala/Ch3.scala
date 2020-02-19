@@ -25,6 +25,14 @@ class Ch3 extends AnyFlatSpec {
     assert(Ch3.exercise4(a) == List(1, 2, 3, -4, -1, 0, -2))
   }
 
+  it should "exercise5" in {
+    val a = Array(1.2, 3.4, 4.5)
+    assert(Ch3.exercise5(a) == 3.033333333333333)
+
+    val b = Array(1.2, 1.3, 1.4)
+    assert(Ch3.exercise5(b) == 1.3)
+  }
+
   it should "exercise6" in {
     assert(Ch3.exercise6(List(1, 2, 3)) == List(3, 2, 1))
   }
