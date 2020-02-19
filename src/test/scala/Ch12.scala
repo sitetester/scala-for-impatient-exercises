@@ -18,4 +18,13 @@ class Ch12 extends AnyFlatSpec {
   it should "exercise6" in {
     assert(Ch12.exercise6_largestAt(x => 10 * x - x * x, 1 to 10) == 5)
   }
+
+  it should "exercise8_corresponds" in {
+
+    val s = Array("abc", "def")
+    val i = Array(3, 3)
+
+    val result = Ch12.exercise8_corresponds(s)(i)
+    assert(result)
+  }
 }
