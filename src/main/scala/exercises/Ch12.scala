@@ -8,4 +8,8 @@ object Ch12 {
   def exercise5(x: Int => Int, a: Seq[Int]): Int = {
     a.map(x).max
   }
+
+  def exercise6_largestAt(x: Int => Int, a: Seq[Int]): Int = {
+    a.map(x).zipWithIndex.max._2 + 1
+  }
 }

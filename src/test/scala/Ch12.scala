@@ -14,4 +14,8 @@ class Ch12 extends AnyFlatSpec {
     assert(Ch12.exercise5(x => x + x, 1 to 10) == 20)
     assert(Ch12.exercise5(x => scala.math.pow(x, 3).toInt, 1 to 10) == 1000)
   }
+
+  it should "exercise6" in {
+    assert(Ch12.exercise6_largestAt(x => 10 * x - x * x, 1 to 10) == 5)
+  }
 }
