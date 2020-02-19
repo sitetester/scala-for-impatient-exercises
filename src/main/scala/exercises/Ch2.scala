@@ -20,7 +20,7 @@ object Ch2 {
     for (c <- str) yield x *= c.toInt
     println(x)
 
-    // 4rth way
+    // 4th way
     var product = 1L
     for (c <- str) {
       product *= c.toInt
